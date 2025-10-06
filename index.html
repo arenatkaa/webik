@@ -92,13 +92,6 @@
     .btn-ghost{border-color:var(--border); background:rgba(255,255,255,.05); color:var(--txt)}
     .btn-ghost:hover{background:rgba(255,255,255,.1)}
 
-    .trustrow{
-      display:flex; gap:16px; flex-wrap:wrap; margin-top:14px; color:var(--txt-dim);
-      font-weight:600; font-size:.95rem;
-    }
-    .trustrow span{display:flex; align-items:center; gap:8px}
-    .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); display:inline-block}
-
     /* Services */
     .service h3{color:#e8e0ff}
     .service p{color:var(--txt-dim)}
@@ -121,12 +114,8 @@
     summary{cursor:pointer; font-weight:700}
     details p{margin:.6em 0 0}
 
-    form{display:grid; gap:10px}
-    input, textarea, select{
-      width:100%; padding:.85em 1em; border-radius:12px; border:1px solid var(--border);
-      background:#211936; color:#fff; outline:none;
-    }
-    input::placeholder, textarea::placeholder{color:#9c8cc6}
+    ul{margin:.6em 0; padding-left:1.1em}
+    li{margin:.35em 0}
 
     footer{padding:40px 0; color:var(--txt-dim); border-top:1px solid var(--border); background:#191626}
 
@@ -166,17 +155,13 @@
             <span class="chip">Redesign stávajících webů</span>
             <span class="chip">SEO + copywriting</span>
             <span class="chip">Obsah & správa sítí</span>
-            <span class="chip">GA4, GTM, GBP</span>
+            <!-- GA4/GTM/GBP chip odstraněn -->
           </div>
           <div class="cta">
             <a href="#kontakt" class="btn btn-primary">Nezávazná konzultace zdarma</a>
             <a href="#sluzby" class="btn btn-ghost">Zjistit víc</a>
           </div>
-          <div class="trustrow">
-            <span><i class="dot"></i> smluvní termíny</span>
-            <span><i class="dot"></i> měřitelné KPI</span>
-            <span><i class="dot"></i> transparentní ceny</span>
-          </div>
+          <!-- trustrow odstraněn -->
         </div>
       </div>
     </div>
@@ -217,11 +202,41 @@
     <div class="container">
       <h2>Proces spolupráce</h2>
       <div class="grid cols-2">
-        <div class="panel step"><span class="num">1</span><div><strong>Úvodní call</strong><p>Cíle, publikum, rozpočet, termíny.</p></div></div>
-        <div class="panel step"><span class="num">2</span><div><strong>Audit & návrh řešení</strong><p>Rychlé výhry + roadmapa a odhad.</p></div></div>
-        <div class="panel step"><span class="num">3</span><div><strong>Tvorba</strong><p>Design, texty, technika, SEO, měření.</p></div></div>
-        <div class="panel step"><span class="num">4</span><div><strong>Spuštění + měření</strong><p>Kontrola kvality, GA4/GTM, KPI.</p></div></div>
-        <div class="panel step"><span class="num">5</span><div><strong>Optimalizace</strong><p>Reporty, A/B testy, doporučení.</p></div></div>
+        <div class="panel step">
+          <span class="num">1</span>
+          <div>
+            <strong>Úvodní domluva</strong>
+            <p>Cíle, publikum, rozpočet, termíny.</p>
+          </div>
+        </div>
+        <div class="panel step">
+          <span class="num">2</span>
+          <div>
+            <strong>Návrh řešení a odhad ceny na míru</strong>
+            <p>Písemný návrh postupu, scope a cenový rámec dle cílů.</p>
+          </div>
+        </div>
+        <div class="panel step">
+          <span class="num">3</span>
+          <div>
+            <strong>Tvorba</strong>
+            <p>Design, texty, technika, SEO, nastavení měření.</p>
+          </div>
+        </div>
+        <div class="panel step">
+          <span class="num">4</span>
+          <div>
+            <strong>Spuštění + měření</strong>
+            <p>Kontrola kvality, GA4/GTM, definovaná KPI.</p>
+          </div>
+        </div>
+        <div class="panel step">
+          <span class="num">5</span>
+          <div>
+            <strong>Optimalizace</strong>
+            <p>Reporty, A/B testy, doporučení a průběžné úpravy.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -231,12 +246,37 @@
     <div class="container">
       <h2>Ceník (orientačně)</h2>
       <div class="panel">
-        <div class="priceitem"><strong>Jednostránkový web</strong><span class="price">od 5 000 Kč</span></div>
-        <div class="priceitem"><strong>Web s více podstránkami</strong><span class="price">od 10 000 Kč</span></div>
-        <div class="priceitem"><strong>Web + kompletní texty</strong><span class="price">od 15 000 Kč</span></div>
-        <div class="priceitem"><strong>Správa sociálních sítí</strong><span class="price">od 8 000 Kč / měs.</span></div>
-        <div class="priceitem"><strong>Správa kampaní</strong><span class="price">od 4 500 Kč / měs.</span></div>
-        <p class="note">* Finální kalkulaci připravím na míru podle rozsahu a cílů.</p>
+        <div class="priceitem">
+          <strong>Tvorba webů a e-shopů na míru + redesign stávajících stránek</strong>
+          <span class="price">od 10 000 – 45 000 Kč</span>
+        </div>
+        <p class="note">Obsahuje návrh struktury, design šablon, technické nasazení, základní SEO a testy. U redesignu důraz na rychlost, UX a bezpečnou migraci.</p>
+
+        <div class="priceitem">
+          <strong>Kompletní SEO a profesionální texty</strong>
+          <span class="price">od 500 Kč / NS • balíčky od 6 000 Kč</span>
+        </div>
+        <p class="note">Analýza klíčových slov, informační architektura, meta data, on-page úpravy, články a prodejní copy.</p>
+
+        <div class="priceitem">
+          <strong>Obsah a správa sociálních sítí</strong>
+          <span class="price">od 4 000 – 12 000 Kč / měs.</span>
+        </div>
+        <p class="note">Obsahový plán, grafika, publikace a reporting (IG/FB/LinkedIn/TikTok). Cena dle počtu postů a kanálů.</p>
+
+        <div class="priceitem">
+          <strong>Propojení s Google a nastavení analytiky</strong>
+          <span class="price">od 3 500 – 8 000 Kč</span>
+        </div>
+        <p class="note">GA4, Tag Manager, události/konverze, Google Business Profile, základní dashboard.</p>
+
+        <div class="priceitem">
+          <strong>Správa a vylepšení firemních profilů napříč platformami</strong>
+          <span class="price">od 2 500 – 6 000 Kč / měs. / platforma</span>
+        </div>
+        <p class="note">Pravidelné aktualizace, moderace, lokální SEO, konzistence značky napříč katalogy a profily.</p>
+
+        <p class="note">* Uvedené ceny jsou orientační. Finální kalkulaci připravím na míru podle rozsahu a cílů.</p>
       </div>
     </div>
   </section>
@@ -260,30 +300,30 @@
       <h2>Kontakt</h2>
       <div class="grid cols-2">
         <div class="panel">
-          <form action="mailto:renata@marketingly.cz" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Jméno" required />
-            <input type="email" name="email" placeholder="E-mail" required />
-            <input type="text" name="url" placeholder="URL webu (volitelné)" />
-            <select name="goal">
-              <option value="">Co potřebujete?</option>
-              <option>Nový web / e-shop</option>
-              <option>Redesign</option>
-              <option>SEO & texty</option>
-              <option>Sociální sítě</option>
-              <option>GA4 / GTM / měření</option>
-            </select>
-            <textarea name="message" rows="4" placeholder="Zpráva"></textarea>
-            <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
-          </form>
-          <p class="note">Nebo napište přímo: <a href="mailto:renata@marketingly.cz">renata@marketingly.cz</a> • IČO: 23507900</p>
+          <h3>Napište mi e-mail</h3>
+          <p>
+            📧 <a href="mailto:renata@marketingly.cz">renata@marketingly.cz</a>
+          </p>
+          <p class="note">
+            Do e-mailu prosím uveďte:
+          </p>
+          <ul>
+            <li>Co potřebujete (nový web / redesign / SEO / sítě / analytika / správa profilů)</li>
+            <li>Vaši představu (stylem, obsahem, funkce)</li>
+            <li>Orientační rozpočet a termín</li>
+            <li>URL stávajícího webu (pokud máte)</li>
+          </ul>
         </div>
         <div class="panel">
           <h3>Proč se ozvat právě teď?</h3>
           <ul>
-            <li>Rychlé doporučení do 24 h</li>
-            <li>Jasný plán kroků a rozpočet</li>
+            <li>Rychlé doručení</li>
+            <li>Jasný plán kroků</li>
             <li>Férové, srozumitelné reporty</li>
           </ul>
+          <div class="cta" style="margin-top:12px">
+            <a class="btn btn-ghost" href="#home">Zpět nahoru</a>
+          </div>
         </div>
       </div>
     </div>
@@ -292,11 +332,12 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      © Marketingly.cz • Design: HTML5 UP (upraveno) • Renata Tomanová
+      © Marketingly.cz 2025 • Renata Tomanová • IČO: 23507900 • se sídlem Strání 738, okres Uherské Hradiště
     </div>
   </footer>
 
   <script>
+    // aktivní odkaz v menu podle scrollu
     const sections=[...document.querySelectorAll('section')];
     const links=[...document.querySelectorAll('#menu a')];
     const activate= id => links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
