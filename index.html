@@ -1,271 +1,221 @@
 <!DOCTYPE HTML>
 <html lang="cs">
   <head>
+    <title>Marketingly.cz | Renata Tomanová</title>
     <meta charset="utf-8" />
-    <title>Marketingly.cz – marketing a weby pro všechny</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-  body {
-    background: #1a1423;
-    color: #e0d7f3;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    margin: 0;
-  }
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* =====================
+         ZÁKLADNÍ STYL
+      ===================== */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #1e1b29;
+        color: #ffffff;
+      }
 
-  h1, h2, h3 {
-    color: #cbb8ff;
-  }
+      a {
+        color: #b37df1;
+        text-decoration: none;
+      }
 
-  a {
-    color: #bda3ff;
-    text-decoration: none;
-  }
+      a:hover {
+        color: #ffffff;
+      }
 
-  a:hover {
-    color: #ffffff;
-  }
+      h1, h2, h3 {
+        color: #b37df1;
+        margin-top: 0;
+      }
 
-  /* PANELS */
-  .panel {
-    background: rgba(40, 30, 60, 0.85);
-    border-radius: 1.5em;
-    padding: 2.5em;
-    margin-bottom: 3em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  }
+      p {
+        line-height: 1.6;
+      }
 
-  #main {
-    padding: 3em 6em;
-  }
+      /* =====================
+         HLAVIČKA
+      ===================== */
+      #header {
+        background: #241935;
+        padding: 4em 2em;
+        text-align: center;
+      }
 
-  /* REMOVE IMAGE */
-  .intro .jumplink.pic img {
-    display: none;
-  }
+      #header h1 {
+        font-size: 2.4em;
+        color: #cbb8ff;
+      }
 
-  .jumplink {
-    background: #2a1f3d;
-    padding: 1em 2em;
-    border-radius: 1em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #cbb8ff;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
+      #header p {
+        color: #b37df1;
+      }
 
-  .jumplink:hover {
-    background: #3d2c59;
-    color: #fff;
-  }
+      /* =====================
+         NAVIGACE
+      ===================== */
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #241935;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+      }
 
-  /* NAVIGATION DESKTOP */
-  #nav {
-    background: #2a1f3d;
-    padding: 1em;
-    border-radius: 2em;
-    position: fixed;
-    left: 2em;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    z-index: 1000;
-  }
+      #nav a {
+        color: #cbb8ff;
+        padding: 0.6em 1em;
+        transition: background 0.3s, color 0.3s;
+        font-weight: 500;
+      }
 
-  #nav a {
-    color: #cbb8ff;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-align: center;
-    transition: color 0.3s ease;
-  }
+      #nav a:hover {
+        background: #3a2a56;
+        color: #fff;
+      }
 
-  #nav a:hover {
-    color: #fff;
-  }
+      /* =====================
+         OBSAH
+      ===================== */
+      #main {
+        padding: 7em 2em 3em 2em; /* kvůli liště nahoře */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+      }
 
-  /* FOOTER */
-  #footer {
-    text-align: center;
-    margin: 2em 0;
-    opacity: 0.6;
-  }
+      .panel {
+        background: #2d2044;
+        padding: 2em;
+        border-radius: 1em;
+        max-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
 
-  /* BUTTONS */
-  .button.primary {
-    background: #5b3cc4;
-    color: #fff !important;
-    border-radius: 1em;
-    padding: 0.8em 1.8em;
-    display: inline-block;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
+      .panel h2 {
+        color: #cbb8ff;
+        margin-bottom: 0.6em;
+      }
 
-  .button.primary:hover {
-    background: #7448f0;
-    transform: translateY(-2px);
-  }
+      .panel p {
+        color: #ddd;
+      }
 
-  /* MOBILE NAVBAR */
-  @media (max-width: 768px) {
-    #main {
-      padding: 2em 1.5em;
-    }
+      .panel a {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.6em 1.2em;
+        background: #8e44ad;
+        color: white;
+        border-radius: 6px;
+        transition: background 0.3s;
+      }
 
-    #nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      border-radius: 0;
-      background: #241935;
-      padding: 0;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
-    }
+      .panel a:hover {
+        background: #b37df1;
+      }
 
-    #nav a {
-      flex: 1;
-      text-align: center;
-      font-size: 1em;
-      color: #cbb8ff;
-      padding: 0.6em 0;
-      transition: background 0.3s, color 0.3s;
-    }
+      /* =====================
+         PATIČKA
+      ===================== */
+      #footer {
+        text-align: center;
+        padding: 2em;
+        background: #1a1526;
+        color: #b37df1;
+        font-size: 0.9em;
+      }
 
-    #nav a:hover {
-      background: #3a2a56;
-      color: #fff;
-    }
+      /* =====================
+         MOBILNÍ VERZE
+      ===================== */
+      @media (max-width: 768px) {
+        #main {
+          padding: 6em 1.5em 2em 1.5em;
+        }
 
-    .panel {
-      padding: 1.8em;
-    }
+        #header {
+          padding: 6em 1.5em 2em 1.5em;
+        }
 
-    h1 {
-      font-size: 1.8em;
-    }
+        .panel {
+          width: 100%;
+          padding: 1.8em;
+        }
 
-    .jumplink {
-      display: block;
-      text-align: center;
-      margin-top: 1.5em;
-    }
-  }
-</style>
+        h1 {
+          font-size: 1.8em;
+        }
 
+        #nav {
+          height: 55px;
+          font-size: 0.95em;
+        }
+
+        #nav a {
+          flex: 1;
+          text-align: center;
+          padding: 0.6em 0;
+        }
+      }
+    </style>
   </head>
 
-  <body class="is-preload">
-    <div id="wrapper">
+  <body>
+    <!-- Navigace -->
+    <nav id="nav">
+      <a href="#home">Domů</a>
+      <a href="#services">Služby</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
 
-      <!-- Nav -->
-      <nav id="nav">
-        <a href="#" class="icon solid fa-home"><span>Domů</span></a>
-        <a href="#work" class="icon solid fa-folder"><span>Služby</span></a>
-        <a href="#contact" class="icon solid fa-envelope"><span>Kontakt</span></a>
-      </nav>
+    <!-- Hlavička -->
+    <header id="header">
+      <h1>Renata Tomanová</h1>
+      <p>@ Marketingly.cz</p>
+    </header>
 
-      <!-- Main -->
-      <div id="main">
+    <!-- Hlavní obsah -->
+    <div id="main">
+      <section id="about" class="panel">
+        <h2>Popis mé práce</h2>
+        <p>
+          Pomáhám podnikatelům a firmám budovat jejich online přítomnost. 
+          Tvořím moderní a funkční webové stránky na míru, spravuji a vytvářím příspěvky 
+          na sociální sítě a nastavuji kompletní reklamní kampaně. 
+          Součástí spolupráce je i tvorba textů a SEO optimalizace, 
+          aby vaše značka byla vidět a rostla online.
+        </p>
+      </section>
 
-        <!-- Intro -->
-        <article id="home" class="panel intro">
-          <header>
-            <h1>Renata Tomanová</h1>
-            <p>Marketing specialist &amp; web designer</p>
-            <p>IČO: 23507900</p>
-          </header>
-          <a href="#work" class="jumplink">
-            <span class="arrow icon solid fa-chevron-right"><span>Moje práce</span></span>
-          </a>
-        </article>
+      <section id="services" class="panel">
+        <h2>Ceník služeb</h2>
+        <p>
+          Orientační ceny – finální kalkulaci připravím na míru podle rozsahu a cílů.
+        </p>
+        <a href="#contact">Kontaktujte mě</a>
+      </section>
 
-        <!-- Work -->
-        <article id="work" class="panel">
-          <header><h2>Popis mé práce</h2></header>
-          <p>
-            Pomáhám podnikatelům a firmám budovat jejich online přítomnost.
-            Tvořím moderní a funkční webové stránky na míru, spravuji a vytvářím příspěvky na sociální sítě
-            a nastavím kompletní reklamní kampaně. Součástí spolupráce je i tvorba textů včetně SEO optimalizace,
-            aby se vaše služby a produkty lépe zobrazovaly ve vyhledávání. Zkrátka – vše, co potřebujete k tomu,
-            aby vaše značka byla vidět a rostla online.
-          </p>
-
-          <section id="pricing">
-            <h2>Ceník služeb</h2>
-            <p>Orientační ceny – finální kalkulaci připravím na míru podle rozsahu a cílů.</p>
-
-            <h3>Tvorba webových stránek</h3>
-            <ul class="pricing-list">
-              <li><strong>Jednostránkový web</strong> <span class="price">od 5 000 Kč</span>
-                <p>Základní SEO, responzivita, nasazení (bez domény a hostingu).</p></li>
-              <li><strong>Web s více podstránkami</strong> <span class="price">od 10 000 Kč</span>
-                <p>Struktura na míru, základní SEO, nasazení.</p></li>
-              <li><strong>Web včetně kompletních textů</strong> <span class="price">od 15 000 Kč</span>
-                <p>Copywriting + SEO texty na míru pro celý web.</p></li>
-            </ul>
-
-            <h3>Správa sociálních sítí</h3>
-            <ul class="pricing-list">
-              <li><strong>4 příspěvky / měsíc</strong> <span class="price">od 4 000 Kč</span>
-                <p>Grafika, texty, publikace, základní reporting.</p></li>
-              <li><strong>Kompletní měsíční správa</strong> <span class="price">od 8 000 Kč</span>
-                <p>Strategie, grafika, plánování, publikace, reporting.</p></li>
-            </ul>
-
-            <h3>Reklamní kampaně</h3>
-            <ul class="pricing-list">
-              <li><strong>Inicializace kampaně</strong> <span class="price">od 3 500 Kč</span>
-                <p>Nastavení účtů, eventů, cílení, rozpočtu a kreativy.</p></li>
-              <li><strong>Pravidelná správa a optimalizace</strong> <span class="price">od 4 500 Kč / měs.</span>
-                <p>Optimalizace výkonu, A/B testy, reporty a doporučení.</p></li>
-            </ul>
-
-            <h3>Copywriting &amp; SEO</h3>
-            <ul class="pricing-list">
-              <li><strong>SEO-friendly texty</strong> <span class="price">od 500 Kč / NS</span>
-                <p>Klíčová slova, struktura nadpisů, meta tagy.</p></li>
-              <li><strong>Obsahová strategie</strong> <span class="price">od 5 000 Kč</span>
-                <p>Analýza témat, publika, publikační plán a návrh formátů.</p></li>
-            </ul>
-
-            <p class="note">* Uvedené ceny jsou orientační, finální nabídku připravím na míru.</p>
-            <p><a href="#contact" class="button primary">Nezávazná poptávka</a></p>
-          </section>
-        </article>
-
-        <!-- Contact -->
-        <article id="contact" class="panel">
-          <header><h2>Kontaktujte mě</h2></header>
-          <p>Pro více informací nebo nezávaznou poptávku mě kontaktujte na e-mailu: <b>renata@marketingly.cz</b></p>
-        </article>
-      </div>
-
-      <div id="footer">
-        <ul class="copyright">
-          <li>&copy; Marketingly.cz</li>
-          <li>Design: HTML5 UP</li>
-        </ul>
-      </div>
+      <section id="contact" class="panel">
+        <h2>Kontakt</h2>
+        <p>
+          📧 <a href="mailto:renata@marketingly.cz">renata@marketingly.cz</a><br />
+          🌐 <a href="https://marketingly.cz">www.marketingly.cz</a>
+        </p>
+      </section>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Patička -->
+    <footer id="footer">
+      © Marketingly.cz | Design: HTML5 UP (upraveno)
+    </footer>
   </body>
 </html>
-
